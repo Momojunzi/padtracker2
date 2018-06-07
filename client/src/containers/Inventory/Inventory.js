@@ -15,7 +15,8 @@ class Inventory extends Component {
     }
   }
 
-  updateInventory = () => {
+  updateInventory = (event) => {
+    event.preventDefault()
     const {location, pads, handTrucks} = this.state.inventory;
     const inventory = {
       location: location,
@@ -29,6 +30,7 @@ class Inventory extends Component {
   }
 
   getFormData = (event) => {
+    event.preventDefault();
     const state = this.state;
     const target = event.target;
     const value = target.value;
