@@ -17,6 +17,7 @@ class Inventory extends Component {
 
   updateInventory = (event) => {
     event.preventDefault()
+    const myForm = document.getElementById('myForm')
     const {location, pads, handTrucks} = this.state.inventory;
     const inventory = {
       location: location,
@@ -26,7 +27,10 @@ class Inventory extends Component {
     }
     console.log(inventory);
     axios.post('/api/updateInventory',inventory)
-      .then((result)=>{console.log("response: " + result)});
+      .then((result)=>{
+        console.log("response: " + result)
+        myform.reset();
+      });
   }
 
   getFormData = (event) => {

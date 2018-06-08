@@ -4,7 +4,7 @@ import "./InputForm.css";
 const InputForm = (props) => {
   return (
     <div>
-      <form className="row justify-content-around">
+      <form className="row justify-content-around" id="myForm">
         <div className="form-group col-11 text-left">
           <label for="location">Location</label>
           <input className="form-control" id="location" placeholder="ex. 0522-10" onChange={props.changeHandler}/>
