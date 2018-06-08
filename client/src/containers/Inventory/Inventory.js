@@ -29,7 +29,7 @@ class Inventory extends Component {
     axios.post('/api/updateInventory',inventory)
       .then((result)=>{
         console.log("response: " + result)
-        myform.reset();
+        myForm.reset();
       });
   }
 
