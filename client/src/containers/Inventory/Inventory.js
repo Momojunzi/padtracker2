@@ -25,7 +25,7 @@ class Inventory extends Component {
       date: moment().format('MMMM Do YYYY hh:mm a')
     }
     console.log(inventory);
-    axios.post('http://localhost:3001/api/updateInventory',inventory)
+    axios.post('/api/updateInventory',inventory)
       .then((result)=>{console.log("response: " + result)});
   }
 

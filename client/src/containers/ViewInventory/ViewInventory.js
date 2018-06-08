@@ -16,7 +16,7 @@ class ViewInventory extends Component {
   }
 
   getInventory = () => {
-    axios.get("http://localhost:3001/api/getInventory")
+    axios.get("/api/getInventory")
       .then(result => {
         this.setState({inventory: result.data}, ()=>{this.totalAcc()})
       })
@@ -39,7 +39,7 @@ class ViewInventory extends Component {
   render () {
     const inv = this.state.inventory.map(entry=>{
       return(
-          <tr>
+          <tr key={entry.location}>
             <td>{entry.location}</td>
             <td>{entry.pads}</td>
             <td>{entry.handTrucks}</td>
