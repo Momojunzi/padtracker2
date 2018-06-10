@@ -10,12 +10,20 @@ const InputForm = (props) => {
           <input className="form-control" id="location" placeholder="ex. 0522-10" onChange={props.changeHandler}/>
         </div>
         <div className="form-group col-11 text-left">
-          <label for="pads">Number of pads in doz</label>
+          <label for="pads">Available pads in doz</label>
           <input className="form-control" id="pads" placeholder="ex. 10 doz" onChange={props.changeHandler}/>
         </div>
         <div className="form-group col-11 text-left">
-          <label for="handTrucks">Number of hand trucks</label>
+          <label for="padsReserved">Reserved pads through Sunday</label>
+          <input className="form-control" id="padsReserved" placeholder="ex. 10 doz" onChange={props.changeHandler}/>
+        </div>
+        <div className="form-group col-11 text-left">
+          <label for="handTrucks">Available hand trucks</label>
           <input className="form-control" id="handTrucks" placeholder="ex. 10" onChange={props.changeHandler}/>
+        </div>
+        <div className="form-group col-11 text-left">
+          <label for="handTrucksReserved">Reserved hand trucks through Sunday</label>
+          <input className="form-control" id="handTrucksReserved" placeholder="ex. 10" onChange={props.changeHandler}/>
         </div>
       </form>
       <div className="coll-12 form-btn">

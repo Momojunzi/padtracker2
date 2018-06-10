@@ -10,7 +10,9 @@ class Inventory extends Component {
     inventory: {
       location:"",
       pads: "",
+      padsReserved: "",
       handTrucks: "",
+      handTrucksReserved: "",
       date: ""
     }
   }
@@ -18,11 +20,13 @@ class Inventory extends Component {
   updateInventory = (event) => {
     event.preventDefault()
     const myForm = document.getElementById('myForm')
-    const {location, pads, handTrucks} = this.state.inventory;
+    const {location, pads, handTrucks, padsReserved, handTrucksReserved} = this.state.inventory;
     const inventory = {
       location: location,
       pads: parseInt(pads),
       handTrucks: parseInt(handTrucks),
+      padsReserved: parseInt(padsReserved),
+      handTrucksReserved: parseInt(handTrucksReserved),
       date: moment().format('MMMM Do YYYY hh:mm a')
     }
     console.log(inventory);

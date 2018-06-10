@@ -5,6 +5,8 @@ const inventorySchema = mongoose.Schema({
   location: {type: String, required: true},
   pads: {type: Number, required: true},
   handTrucks: {type: Number, required: true},
+  padsReserved: {type: Number},
+  handTrucksReserved: {type: Number},
   date: {type: String}
 }, {collection: "Inventory"});
 

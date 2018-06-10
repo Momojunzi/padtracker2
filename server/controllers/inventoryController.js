@@ -4,7 +4,7 @@ module.exports = {
   updateInventory: function(req, res) {
     console.log(req.body);
     db.Inventory
-      .findOneAndUpdate({location: req.body.location}, {pads: req.body.pads, handTrucks: req.body.handTrucks, date: req.body.date})
+      .findOneAndUpdate({location: req.body.location}, {pads: req.body.pads, padsReserved: req.body.padsReserved, handTrucksReserved: req.body.handTrucksReserved, handTrucks: req.body.handTrucks, date: req.body.date})
       .then(dbInventory =>{
         console.log("dbInventory: " + dbInventory);
         db.Inventory
