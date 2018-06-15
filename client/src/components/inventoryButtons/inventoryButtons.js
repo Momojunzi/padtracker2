@@ -1,8 +1,8 @@
 import React from 'react'
 import MediaQuery from 'react-responsive'
 import {Spring, Transition} from 'react-spring'
-const componentDown  = styles => <i className="fas fa-chevron-down" style={{...styles, position: 'relative', zIndex: '5'}}></i>;
-const componentUp = styles => <i className="fas fa-chevron-up" style={{...styles, position: 'relative', zIndex: '2'}}></i>
+const componentDown  = styles => <i className="fas fa-bars" style={{...styles, position: 'relative', zIndex: '5'}}></i>;
+const componentUp = styles => <i className="fas fas fa-bars" style={{...styles, position: 'relative', zIndex: '2'}}></i>
 
 const InventoryButtons = (props) => {
 
@@ -67,9 +67,10 @@ const InventoryButtons = (props) => {
           }
         </Spring>
         <div className="col-12" style={{color:"gainsboro", position: 'relative'}} onClick={props.handleToggle}>
-          <Transition from={{opacity:0, rotation: '0deg'}} enter={{opacity:1, rotation: '90deg'}} leave={{opacity: 0, rotation: '0deg'}}>
+          {/*<Transition from={{opacity:0, rotation: '0deg'}} enter={{opacity:1, rotation: '90deg'}} leave={{opacity: 0, rotation: '0deg'}}>
             {toggle ? componentUp : componentDown}
-          </Transition>
+          </Transition>*/}
+          <i className="fas fa-bars" style={{position: 'relative', zIndex: '5'}}></i>
         </div>
       </MediaQuery>
       <MediaQuery minWidth={768}>

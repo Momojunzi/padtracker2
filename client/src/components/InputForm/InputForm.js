@@ -27,7 +27,7 @@ const InputForm = (props) => {
         </div>
       </form>
       <div className="coll-12 form-btn">
-        <button className="btn btn-lg btn-success" onClick={props.clickHandler}>Submit</button>
+        <button className="btn btn-lg btn-success col-6 col-md-4" onClick={props.clickHandler}>Submit</button>
       </div>
     </div>
   )
