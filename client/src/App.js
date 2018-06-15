@@ -23,10 +23,16 @@ class App extends Component {
       });
   }
   render() {
+    const appStyle = {
+      fontFamily: "'Roboto', sans-serif"
+    }
+    const titleStyle = {
+      fontFamily: "'Russo One', sans-serif"
+    }
     return (
-      <div className="App container-fluid justify-content-center">
+      <div className="App container-fluid justify-content-center" style={appStyle}>
         <div className="row justify-content-center title-div">
-          <h4 className="title">Moving Pad Tracker</h4>
+          <h3 className="title" style={titleStyle}>Pad Tracker</h3>
         </div>
         <Router>
           <div className="col-md-8 mx-auto px-0">
